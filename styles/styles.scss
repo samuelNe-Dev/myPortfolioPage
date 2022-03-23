@@ -1,0 +1,106 @@
+$darkBlue : #051367;
+$normalBlue : #2D31FA;
+$lightBlue : #5D8BF4;
+$whiteBlue : #DFF6FF;
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: $darkBlue;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $normalBlue;
+    padding: 20px 50px;
+    
+    .navbar-links {
+        display: flex;
+        gap: 20px;
+
+        list-style: none;
+
+        a {
+            &:hover{
+                color: white;
+                transition: 0.3s;
+                border-bottom: 1px white solid;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $whiteBlue;
+        font-size: 16px;
+        &:hover{
+            color: white;
+            transition: 0.3s;
+        }
+    }
+
+    #logo{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .toggle-button{
+        position: absolute;
+        top: 1.8rem;
+        right: 2.3rem;
+        display: none;
+        flex-direction: column;
+
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        .bar {
+            height: 3px;
+            width: 100%;
+            background-color: $whiteBlue;
+            border-radius: 10px;
+        }
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    .navbar .toggle-button{
+        display: flex;
+    }
+
+    .navbar ul{
+        display: none !important;
+        margin-top: 30px;
+        padding-left: 0;
+        flex-direction: column;
+        width: 100%;
+
+        li {
+            text-align: center;
+            width: 100%;
+        
+            a:hover {
+                background-color: $darkBlue;
+                padding: 10px 15px;
+                border-radius: 10px;
+                border-bottom: none !important;
+            }
+        }
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar ul.active{
+        display: flex !important;
+        padding-bottom: 0; 
+    }
+}
+

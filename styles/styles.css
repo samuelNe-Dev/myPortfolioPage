@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #051367;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2D31FA;
+  padding: 20px 50px;
+}
+
+.navbar .navbar-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar .navbar-links a:hover {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px white solid;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #DFF6FF;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar #logo {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.navbar .toggle-button {
+  position: absolute;
+  top: 1.8rem;
+  right: 2.3rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #DFF6FF;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar ul {
+    display: none !important;
+    margin-top: 30px;
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .navbar ul li {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar ul li a:hover {
+    background-color: #051367;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-bottom: none !important;
+  }
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .navbar ul.active {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    padding-bottom: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
